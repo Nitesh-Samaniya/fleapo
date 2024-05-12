@@ -271,6 +271,21 @@ nav{
     height: 50%;
 }
 
+#rating{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 600;
+    width: 350px;
+    font-size: small;
+    margin: auto;
+    background-color: white;
+}
+
+#rating > div > div > span{
+    color: gray;
+}
+
 
 @media (max-width: 1210px){
     #header>div{
@@ -503,5 +518,8 @@ nav{
     }
     #header>div{
         left: 18%
+    }
+    #rating{
+        font-size: xx-small;
     }
 }
