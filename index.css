@@ -422,6 +422,83 @@ nav{
     align-items: center;
 }
 
+/* faq */
+.faq{
+    /* background-image: url('/faq-bg.png');
+    background-position: left;
+    background-repeat: no-repeat; */
+    height: 100vh;
+    position: relative;
+}
+.faq .faq-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.faq .faq-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.faq .faq-container .accordian{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+.faq .faq-container .left-faq{
+    margin-left: auto;
+    margin-right: auto;
+}
+.faq .faq-container .left-faq .faq-title{
+    width: min-content;
+}
+.faq .faq-container .left-faq .faq-title h2{
+    font-size: 60px;
+    font-family: raleway;
+    color: var(--primary-color);
+}
+.faq .faq-container .right-faq {
+ width: 696px;
+ margin-right: 30px;
+}
+.faq .faq-container .right-faq .faq-ques{
+    display: flex;justify-content: space-between;
+    align-items: center;
+}
+.faq .faq-container .right-faq .faq-ques h5{
+    font-size: 18px;
+    font-family: raleway,'san-serif';
+    color: var(--primary-color);
+}
+.faq .faq-container .right-faq .faq-ans{
+    padding-top: 20px;
+}
+.faq .faq-container .right-faq .faq-ans p{
+    color: var(--secondary-color);
+    /* font-family: inter; */
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+ display: none;
+}
+.faq .faq-container .right-faq .faq-ans.active p{
+    display: block;
+}
+.faq .faq-container .right-faq .faq-icon .minus{
+    display: none;
+}
+.faq .faq-container .right-faq .faq-icon.active .minus{
+    display: block;
+}
+.faq .faq-container .right-faq .faq-icon.active .plus{
+    display: none;
+}
+
+
 /* contact */
 .contact{
     margin-top: 5rem;
@@ -630,6 +707,26 @@ nav{
     }
 }
 
+@media screen and (max-width:1080px) {
+    .faq .faq-container{
+        flex-direction: column;
+    }
+    .faq .faq-container .right-faq{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 0;
+        width: 80%;
+    }
+    .faq .faq-container .left-faq .faq-title{
+        width:auto;
+        margin: 20px;
+    }
+    .faq .faq-container .left-faq .faq-title h2{
+        font-size: 30px;
+    }
+}
+
 @media screen and (max-width:1020px) {
     .pricing .pricing-container{
         padding: 50px 100px;
@@ -785,6 +882,18 @@ nav{
     }
 }
 
+@media screen and (max-width:600px){
+    .faq .faq-container .right-faq{
+        width: 100%;
+    }
+    .faq .faq-bg {
+        left: -86px;
+    }
+    .faq .faq-container .accordian{
+        margin: 20px 20px;
+    }
+}
+
 @media (max-width: 500px){
     nav{
         padding: 1rem 2rem;
@@ -864,6 +973,9 @@ nav{
 @media screen and (max-width:480px){
     .pricing .pricing-container{
         padding: 50px 30px;
+    }
+    .faq .faq-bg {
+        left: -200px;
     }
 }
 
